@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".ItemDetailsFragment">
+
+    <com.google.android.material.card.MaterialCardView
+        style="@style/MaterialAlertDialog.Material3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:elevation="60dp"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="16dp">
+
+
+            <TextView
+                android:id="@+id/item_id"
+                style="@style/Widget.ToDoList.TextView"
+                android:layout_width="wrap_content"
+                android:layout_marginTop="@dimen/margin"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="id" />
+
+            <TextView
+                android:id="@+id/item_name"
+                style="@style/Widget.ToDoList.TextView"
+                android:layout_width="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/item_id"
+                tools:text="Screwdrivers" />
+
+
+            <TextView
+                android:id="@+id/item_conent"
+                style="@style/Widget.ToDoList.TextView"
+                android:layout_width="0dp"
+                android:layout_marginStart="@dimen/margin_between_elements"
+                android:layout_marginTop="@dimen/margin"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/item_name"
+                tools:text="6" />
+
+            <TextView
+                android:id="@+id/item_done"
+                style="@style/Widget.ToDoList.TextView"
+                android:layout_width="0dp"
+                android:layout_marginStart="@dimen/margin_between_elements"
+                android:layout_marginTop="@dimen/margin"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/item_conent"
+                tools:text="5" />
+
+            <TextView
+                android:id="@+id/btn_relist"
+                style="@style/Widget.ToDoList.TextView"
+                android:layout_width="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="@dimen/margin"
+                android:clickable="true"
+                android:text="Mark it as To Do ?"
+                app:layout_constraintStart_toEndOf="@id/item_done"
+                app:layout_constraintTop_toBottomOf="@+id/item_conent" />
+
+            <TextView
+                android:id="@+id/item_date"
+                style="@style/Widget.ToDoList.TextView"
+                android:layout_width="0dp"
+                android:layout_marginStart="@dimen/margin_between_elements"
+                android:layout_marginTop="@dimen/margin"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/item_done"
+                tools:text="5" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/edit_item"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/margin_between_elements"
+                android:layout_marginBottom="@dimen/margin_between_elements"
+                android:contentDescription="@string/edit_item"
+                android:src="@drawable/ic_edit"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@android:color/white" />
+
+            <Button
+                android:id="@+id/save_item"
+                style="Widget.Material3.Button.ElevatedButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin"
+                android:text="@string/done"
+                app:layout_constraintBottom_toTopOf="@+id/delete_item"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/item_date" />
+
+            <Button
+                android:id="@+id/delete_item"
+                style="Widget.Material3.Button.ElevatedButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin"
+                android:text="@string/delete"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/save_item" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
